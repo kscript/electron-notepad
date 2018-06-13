@@ -90,7 +90,7 @@ menu.append(new MenuItem({ role: 'cut', label: '剪切', click() { console.log(t
 menu.append(new MenuItem({ role: 'paste', label: '粘贴', click() { console.log(this, arguments) } }))
 menu.append(new MenuItem({ role: 'delete', label: '删除', click() { console.log(this, arguments) } }))
 menu.append(new MenuItem({ type: 'separator' }))
-menu.append(new MenuItem({ role: 'toggledevtools', label: '审查元素', click() { console.log(this, arguments) } }))
+// menu.append(new MenuItem({ role: 'toggledevtools', label: '审查元素', click() { console.log(this, arguments) } }))
 menu.append(new MenuItem({ role: 'reload', label: '刷新', click() { console.log(this, arguments) } }))
 menu.append(new MenuItem({ role: 'quit', label: '退出', click() { console.log(this, arguments) } }))
 

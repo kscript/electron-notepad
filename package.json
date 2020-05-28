@@ -1,13 +1,14 @@
 {
-  "name": "electron-quick-start",
+  "name": "electron-notepad",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "./src/main.js",
   "scripts": {
-    "start": "electron .",
-    "packager": "electron-packager . Notepad2018 --win --out ./notepad2018 --arch=x64 --app-version=0.0.1 --electron-version=2.0.0"
+    "rollup:main": "rollup -c -i src/main.ts -o src/main.js",
+    "rollup:renderer": "rollup -c -i src/renderer.ts -o public/bundle.js -w",
+    "start": "npm run rollup:main && electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/kscript/electron-notepad",
   "keywords": [
     "Electron",
     "quick",
@@ -18,8 +19,15 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "@babel/core": "^7.10.1",
+    "electron": "^9.0.0",
+    "fs": "^0.0.1-security",
+    "rollup": "^2.11.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.3"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
